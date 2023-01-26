@@ -23,16 +23,17 @@ export default class ImageGallary extends Component {
         {
             src: './Images/img5.jpg',
             title: 'img5'
-        },
-        {
-            src: './Images/img6.jpg',
-            title: 'img6'
         }
     ];
     return (
-      <div>
+      <div className='container'>
         <h1>Image Gallary</h1>
         <hr />
+        <div>
+            {
+                imgGallary.map((index) => <img src={index.src} title={index.title} />)
+            }
+        </div>
     </div>
     )
   }
